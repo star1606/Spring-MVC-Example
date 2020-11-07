@@ -1,8 +1,11 @@
 package com.cos.mvclecture;
 
 import java.time.LocalDateTime;
-
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -30,9 +33,19 @@ public class EventService {
 		System.out.println("event 값은? :" + events);
 		List<Event> result = events.collect(Collectors.toList());
 		System.out.println("result 값은? : " + result);
-		
+		System.out.println(result.get(0).getName());
 		
 		// return을 스트링을 리스트로 하는 방법은?	
-		return result;
+		
+		
+		List<Event> eventList = new ArrayList<>();
+		System.out.println("eventList add 전" + eventList);
+		eventList.add(event1);
+		eventList.add(event2);
+		System.out.println("eventList add 후" + eventList);
+		
+		return eventList;
+		
+		
 	}
 }
