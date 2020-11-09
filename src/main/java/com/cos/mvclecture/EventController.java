@@ -23,7 +23,7 @@ public class EventController {
 		// 화면에 전달할 model에다가 우리가 담고 싶은 것을 담으면 된다.
 		//model.addAllAttributes(""); // Map 이므로 key, value형식으로 담는거
 		model.addAttribute("events", eventService.getEvents());
-		return "events";
+		return "events/list";
 	}
 	
 	
